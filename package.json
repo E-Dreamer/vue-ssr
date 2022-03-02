@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "lint:create": "eslint --init",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx,.vue src",
+    "lint:fix" :"eslint --ext .ts,.tsx,.jsx,.js,.vue src --fix",
     "build:client": "vue-cli-service build",
     "build:server": "cross-env WEBPACK_TARGET=node vue-cli-service build --mode server",
     "build":"npm run build:server && move dist\\vue-ssr-server-bundle.json bundle && npm run build:client && move bundle dist\\vue-ssr-server-bundle.json"
