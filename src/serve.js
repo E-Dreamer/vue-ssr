@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-03-02 11:05:17
- * @LastEditTime: 2022-03-02 13:47:23
+ * @LastEditTime: 2022-03-02 15:12:21
  * @LastEditors: E-Dreamer
  * @Description:
  */
@@ -43,9 +43,7 @@ export default context => {
                     };
                     resolve(app);
                 })
-                .catch(() => {
-                    resolve(app);
-                });
+                .catch(reject);
         }, reject);
     });
 };
