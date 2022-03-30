@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-03-02 11:05:17
- * @LastEditTime: 2022-03-02 13:47:37
+ * @LastEditTime: 2022-03-30 09:02:56
  * @LastEditors: E-Dreamer
  * @Description:
  */
@@ -16,6 +16,7 @@ router.onReady(() => {
     // 以便我们不会二次预取(double-fetch)已有的数据。
     // 使用 `router.beforeResolve()`，以便确保所有异步组件都 resolve。
     router.beforeResolve((to, from, next) => {
+        console.log(to,from)
         const matched = router.getMatchedComponents(to);
         const prevMatched = router.getMatchedComponents(from);
         // 我们只关心非预渲染的组件

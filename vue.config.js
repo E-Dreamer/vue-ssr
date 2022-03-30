@@ -10,7 +10,8 @@ const target = TARGET_NODE ? 'serve' : 'client';
 const isPro = process.env.NODE_ENV !== 'development'
 module.exports = {
     lintOnSave: false,
-    publicPath: isPro ? '/' : 'http://127.0.0.1:8080/',
+    // publicPath: isPro ? '/' : 'http://127.0.0.1:8080/',
+    publicPath: isPro ? '/' : '/',
     configureWebpack: () => ({
     // 将 entry 指向应用程序的 serve / client 文件
         entry: `./src/${target}.js`,
